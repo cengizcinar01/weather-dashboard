@@ -1,5 +1,5 @@
 import {NavLink} from "react-router-dom";
-import s from './style/NavBar.module.scss';
+import s from './styles/NavBar.module.scss';
 
 const links = [
     {to: "/", label: "Home"},
@@ -8,7 +8,7 @@ const links = [
     {to: "/about", label: "About"}
 ]
 
-export default function NavBar() {
+export const NavBar = () => {
     const activeClass = ({isActive}: { isActive: boolean }) => isActive ? s.active : undefined;
     return (
         <nav className={s.Wrapper}>

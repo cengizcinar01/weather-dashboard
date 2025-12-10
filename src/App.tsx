@@ -1,21 +1,21 @@
-import {BrowserRouter, Routes, Route} from 'react-router-dom';
-import NavBar from './component/NavBar.tsx'
-import {Home} from './page/Home.tsx'
-import {Favorites} from './page/Favorites.tsx'
-import {Info} from './page/Info.tsx'
-import {About} from './page/About.tsx'
-import {Error} from "./page/Error.tsx";
+import {BrowserRouter, Route, Routes} from 'react-router-dom';
+import {NavBar} from './components/NavBar.tsx'
+import {HomePage} from './pages/HomePage.tsx'
+import {FavoritesPage} from './pages/FavoritesPage.tsx'
+import {InfoPage} from './pages/InfoPage.tsx'
+import {AboutPage} from './pages/AboutPage.tsx'
+import {ErrorPage} from "./pages/ErrorPage.tsx";
 
 export default function App() {
     return (
         <BrowserRouter>
             <NavBar></NavBar>
             <Routes>
-                <Route path="/" element={<Home/>}/>
-                <Route path="/favorites" element={<Favorites/>}/>
-                <Route path="/info" element={<Info/>}/>
-                <Route path="/about" element={<About/>}/>
-                <Route path="/*" element={<Error/>}/>
+                <Route path="/" element={<HomePage/>}/>
+                <Route path="/favorites" element={<FavoritesPage/>}/>
+                <Route path="/info" element={<InfoPage/>}/>
+                <Route path="/about" element={<AboutPage/>}/>
+                <Route path="/*" element={<ErrorPage/>}/>
             </Routes>
         </BrowserRouter>
     );
